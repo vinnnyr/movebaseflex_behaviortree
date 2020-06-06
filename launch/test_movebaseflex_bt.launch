@@ -2,6 +2,8 @@
 <param name="/use_sim_time" value="true"/>
 <!-- ****** RVIZ ***** -->
 <node name="rviz" pkg="rviz" type="rviz" output="screen" />
+<node pkg="mbf_costmap_nav" type="mbf_costmap_nav" respawn="false" name="move_base_flex" output="screen">
+    <param name="tf_timeout" value="1.5"/>
+</node>
 <node name="movebaseflexbehaviortree" pkg="mbf_bt" type="movebaseflex_bt_node" output='screen' />
-
 </launch>
